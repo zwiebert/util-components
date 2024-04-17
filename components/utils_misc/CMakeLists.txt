@@ -1,4 +1,4 @@
-set(srcs bcd.c  stof.c  sun.c base64.c ftoa.c cstring_utils.cc)
+set(srcs src/bcd.c  src/stof.c  src/sun.c src/base64.c src/ftoa.c src/cstring_utils.cc)
 set(platform_srcs esp32/itoa.c esp32/mutex.cc)
 
 

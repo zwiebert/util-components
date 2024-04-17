@@ -1,4 +1,4 @@
-set(srcs dbg.cc)
+set(srcs src/dbg.cc)
 
 if(COMMAND idf_component_register)
 idf_component_register(
