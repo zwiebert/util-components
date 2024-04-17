@@ -1,0 +1,3 @@
+[submodule "external/host-test-idf"]
+	path = external/host-test-idf
+	url = https://github.com/zwiebert/host-test-idf.git
