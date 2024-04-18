@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = components-mcu
+PROJECT_NAME           = utils-lib
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -44,7 +44,8 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          =
+PROJECT_BRIEF          = some questionable utility code
+
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -158,7 +159,7 @@ INLINE_INHERITED_MEMB  = NO
 # shortest path that makes the file name unique will be used
 # The default value is: YES.
 
-FULL_PATH_NAMES        = NO
+FULL_PATH_NAMES        = YES
 
 # The STRIP_FROM_PATH tag can be used to strip a user-defined part of the path.
 # Stripping is only done if one of the specified strings matches the left-hand
@@ -170,7 +171,9 @@ FULL_PATH_NAMES        = NO
 # will be relative from the directory where doxygen is started.
 # This tag requires that the tag FULL_PATH_NAMES is set to YES.
 
-STRIP_FROM_PATH        = 
+STRIP_FROM_PATH        = /home/bertw/proj/mcu/libs/util-components/components/utils_misc/include \
+                         /home/bertw/proj/mcu/libs/util-components/components/utils_time/include \
+                         /home/bertw/proj/mcu/libs/util-components/components/utils_debug/include
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of the
 # path mentioned in the documentation of a class, which tells the reader which
@@ -179,7 +182,9 @@ STRIP_FROM_PATH        =
 # specify the list of include paths that are normally passed to the compiler
 # using the -I flag.
 
-STRIP_FROM_INC_PATH    =
+STRIP_FROM_INC_PATH    = components/fernotron_trx/include \
+                         components/fernotron_app/include \
+                         components/fernotron_uout/include
 
 # If the SHORT_NAMES tag is set to YES, doxygen will generate much shorter (but
 # less readable) file names. This can be useful is your file systems doesn't
@@ -342,7 +347,7 @@ MARKDOWN_SUPPORT       = YES
 # Minimum value: 0, maximum value: 99, default value: 5.
 # This tag requires that the tag MARKDOWN_SUPPORT is set to YES.
 
-TOC_INCLUDE_HEADINGS   = 10
+TOC_INCLUDE_HEADINGS   = 0
 
 # When enabled doxygen tries to link words that correspond to documented
 # classes, or namespaces to their corresponding documentation. Such a link can
@@ -2192,7 +2197,7 @@ INCLUDE_PATH           =
 INCLUDE_FILE_PATTERNS  =
 
 # The PREDEFINED tag can be used to specify one or more macro names that are
-# defined before the preprocessor is started (similar to the -D option of e.g.
+# definebefore the preprocessor is started (similar to the -D option of e.g.
 # gcc). The argument of the tag is a list of macros of the form: name or
 # name=definition (no spaces). If the definition and the "=" are omitted, "=1"
 # is assumed. To prevent a macro definition from being undefined via #undef or

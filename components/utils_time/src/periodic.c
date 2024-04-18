@@ -1,6 +1,6 @@
 
 #include "utils_time/periodic.h"
-#include "utils_misc/int_types.h"
+#include "stdint.h"
 #include "utils_time/run_time.h"
 
 
