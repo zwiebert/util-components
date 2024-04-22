@@ -1,7 +1,4 @@
 #include <unity.h>
-#ifdef TEST_HOST
-#include <test_runner.h>
-#endif
 
 #include <utils_misc/ftoa.h>
 
@@ -11,7 +8,10 @@ void tst_ftoa() {
   TEST_ASSERT_EQUAL_STRING("53.12", s);
 }
 
-TEST_CASE("ftoa", "[utils_misc]")
-{
-  tst_ftoa();
+int main() {
+  UNITY_BEGIN();
+
+  RUN_TEST(tst_ftoa);
+
+  return UNITY_END();
 }
