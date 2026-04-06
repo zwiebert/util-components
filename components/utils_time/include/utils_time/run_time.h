@@ -2,6 +2,8 @@
  * \file   utils_time/run_time.h
  * \brief  provide time since MCU startup
  */
+#include <sdkconfig.h>
+//////////////////////
 
 #ifdef __cplusplus
   extern "C" {
