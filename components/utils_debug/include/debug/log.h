@@ -1,4 +1,4 @@
-#ifdef MCU_ESP32
+#ifdef ESP_PLATFORM
 
 #include <esp_log.h>
 #define db_loge  ESP_LOGE
