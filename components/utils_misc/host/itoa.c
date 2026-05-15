@@ -4,8 +4,6 @@
  *  Created on: 21.03.2020
  *      Author: bertw
  */
-
-
 #include <stdio.h>
 #include <string.h>
 

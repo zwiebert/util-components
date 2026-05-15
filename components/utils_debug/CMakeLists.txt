@@ -1,4 +1,6 @@
 set(srcs src/dbg.cc)
+set(platform_srcs "")
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake" OPTIONAL)
 
 if(COMMAND idf_component_register)
 idf_component_register(

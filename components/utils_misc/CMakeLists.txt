@@ -1,22 +1,6 @@
 set(srcs src/bcd.c  src/stof.c  src/sun.c src/base64.c src/ftoa.c src/cstring_utils.cc)
-set(platform_srcs esp32/itoa.c esp32/mutex.cc)
-
-
-if(NOT DEFINED ${TARGET_PLATFORM_FILTER})
-  if(COMMAND idf_component_register)
-    set(TARGET_PLATFORM_FILTER "esp32/.*")
-  elseif(DEFINED CMAKE_SYSTEM_PROCESSOR)
-    set(TARGET_PLATFORM_FILTER "")
-    message("please set TARGET_PLATFORM_FILTER for <${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}>")
-    set(TARGET_PLATFORM_FILTER "NONE")
-  else()
-    set(TARGET_PLATFORM_FILTER "host/.*")
-  endif()
-endif()
-message("TARGET_PLATFORM_FILTER regex is: <${TARGET_PLATFORM_FILTER}>")
-list(FILTER platform_srcs INCLUDE REGEX "${TARGET_PLATFORM_FILTER}")
-list(APPEND srcs ${platform_srcs})
-
+set(platform_srcs esp32/itoa.c host/itoa.c esp32/mutex.cc)
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake")
 
 
 

@@ -1,8 +1,6 @@
 set(srcs src/periodic.c)
-
-if(${PLATFORM_HOST})
-  list(APPEND srcs host/ut_run_time.cc)
-endif()
+set(platform_srcs host/ut_run_time.cc)
+include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake")
 
 idf_component_register(SRCS ${srcs} 
     INCLUDE_DIRS "./include"
