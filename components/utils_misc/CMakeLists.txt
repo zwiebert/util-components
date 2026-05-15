@@ -5,14 +5,13 @@ include("${CMAKE_CURRENT_LIST_DIR}/../../source_filter.cmake")
 
 
 if(COMMAND idf_component_register)
-idf_component_register(SRCS ${srcs} ${srcs} 
-    REQUIRES 
+idf_component_register(SRCS ${srcs}
     PRIV_REQUIRES utils_debug
     INCLUDE_DIRS "./include"
 )
 
-component_compile_options(${comp_compile_opts})
-component_compile_features(${comp_compile_feats})
+ 
+target_compile_options(${COMPONENT_LIB} PRIVATE "SHELL:-include sdkconfig.h")
 
 else()
 add_library(utils_misc STATIC ${srcs})

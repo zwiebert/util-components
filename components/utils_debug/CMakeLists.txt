@@ -8,8 +8,8 @@ idf_component_register(
     INCLUDE_DIRS "./include"
 )
 
-component_compile_options(${comp_compile_opts})
-component_compile_features(${comp_compile_feats})
+ 
+target_compile_options(${COMPONENT_LIB} PRIVATE "SHELL:-include sdkconfig.h")
 else()
 
 add_library(utils_debug STATIC ${srcs})
